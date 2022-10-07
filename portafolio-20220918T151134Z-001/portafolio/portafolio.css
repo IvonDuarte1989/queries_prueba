@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* Incorporación de la carpeta fonts descargada de https://www.dafont.com/es/ */
+@font-face {
+    font-family: "gili";
+    src: url('fonts/giliams/Giliams-Regular.ttf');
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /*Responsive*/
+    justify-content:space-between; /*Misma separación entre las divsiones*/
+}
+
+h1{
+    font-size: 8rem;
+    font-family: "gili";
+    text-align: center;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column; /* Dirección de flex en columnas para posicionar titulo arriba y texto debajo*/
+    background-color: aquamarine;
+    height: 30vh;
+    justify-content: center; /*Posiciona el menú en la  mitad de la altura del encabezado*/
+    
+}
+
+.flex-container-header{
+    display: flex;
+    align-items:center; /*Posiciona el menu en el medio de la fila*/
+    justify-content: end; /*Posiciona el menu al final de la derecha*/
+  
+}
+
+.parrafo{
+    text-align: center; /*Posiciona el párrafo al centro*/
+    margin: 5rem;
+    font-size: 3rem; /*Tamaño del párrafo*/
+}
+
+.grid-items{
+    padding:25%; /*Separación de las fotos al borde de la pantalla*/
+    display: flex; /*Empleando flex en cada cajita*/
+    flex-direction: column; /*Trabajando flex en vertical para el titulo del trabajo y descripción.*/
+    align-items: center; /*Posiciona el titulo y descripción al centro*/
+    background: linear-gradient(90deg, aquamarine, white);
+
+}
+
+header{
+    background-color: black  !important; /*Color de fondo del encabezado*/
+    height: 10vh !important; /*Alto del encabezado*/
+    
+}
+
+#ul-header{
+    display: flex; /*Posiciona a su hijo directo en linea (los li)*/
+    justify-content:flex-end; /*Posiciona el menú a la derecha*/
+    
+}
+
+.li-header{
+    
+    font-size: 2rem; /*Agranda el tamaño de la letra del menu*/
+    list-style-type: none; /*Saca el punto del listado*/
+    
+}
+
+a{
+    text-decoration: none; /*Saca la linea de subrayado de los hipervínculos*/
+    color: white; /*Color de fuente del menú*/
+    margin: 1rem; /*Margen entre los hipervínculos*/
+
+}
+
+img{
+    border-radius: 10%;
+}
+
+h2{
+    font-family:'Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif';
+}
+
+.gif{
+    width: 35rem;
+    height: 30rem;
+}
+
+.flex-container-aside{
+    display: flex; /*Convirtiendo en flex para posicionar img y li*/
+    justify-content:space-around; /*Espacio entre el gif y habilidades*/
+    
+}
+
+h2{
+    font-size: 4rem;
+    font-family: "gili";
+    text-align: center;
+}
+
+.tamaño-fuente{
+    font-size: 2rem;/*Tamaño del párrafo dentro de footer*/
+}
+
+footer{
+    background-color: black  !important; /*Color de fondo del encabezado*/
+    height: 10vh; 
+    color:white;
+    display: flex; /*Convirtiendo el footer en flex para posicionar*/
+    flex-direction: column; /*Para trabajar las posicones en columnas*/
+    justify-content: center;
+    align-items: center;
+
+}
+
+#animacion{
+    animation-name: ejemploImg;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* Animación con imágenes */
+@keyframes ejemploImg {
+    from{background-image:url('https://picsum.photos/400/500?random=5');
+        background-repeat: no-repeat;}
+
+    to{background-image:url('https://picsum.photos/400/500?random=6');
+        background-repeat: no-repeat;}
+    
+}
+
+/* Ejemplo de tres puntos de control con media querys */
+@media screen and (max-width:600px){
+    h1{
+        font-size: 3rem;
+        color:blue;
+    }
+
+    .flex-container{
+        flex-direction: row; /*Cambio de dirección a filas para que el titulo proyectos no quede encima del menú*/
+        align-items: center; /*posiciona el menu en el centro de la fila*/
+    }
+}
+
+@media screen and (min-width:768px){
+    h2{
+        color:red; /*Para tablet sera h2 rojo*/
+    }
+    h1{
+        color: yellow;
+    }
+}
+
+@media screen and (min-width:1440px){
+
+    h1{
+        color: black;
+    }
+    h2{
+        color:black; /*Para tablet sera h2 rojo*/
+    }
+}

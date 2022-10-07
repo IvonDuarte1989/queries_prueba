@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* Incorporación de la carpeta fonts descargada de https://www.dafont.com/es/ */
+@font-face {
+    font-family: "gili";
+    src: url('../portafolio-20220918T151134Z-001/portafolio/fonts/giliams/Giliams-Regular.ttf');
+}
+
+.flex-container-header{
+    display: flex;
+    
+    justify-content: center; /*Posiciona el menu al final de la derecha*/ 
+}
+
+header{
+    background-color: black  !important; /*Color de fondo del encabezado*/
+    height: 10vh !important; /*Alto del encabezado*/   
+}
+
+#ul-header{
+    align-items:center; /*Posiciona el menu en el medio de la fila*/
+    display: flex; /*Posiciona a su hijo directo en linea (los li)*/
+    justify-content:flex-end; /*Posiciona el menú a la derecha*/
+}
+
+.li-header{
+    
+    font-size: 2rem; /*Agranda el tamaño de la letra del menu*/
+    list-style-type: none; /*Saca el punto del listado*/
+        
+}
+
+a{
+    text-decoration: none; /*Saca la linea de subrayado de los hipervínculos*/
+    color: white; /*Color de fuente del menú*/
+    margin: 6rem; /*Margen entre los hipervínculos*/
+
+}
+
+nav {
+    display: flex;
+}
+
+.logo {
+    max-width: 10%;
+    max-height: 10%;
+}
+
+img{
+    width: 100%;
+}

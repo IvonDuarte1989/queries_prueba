@@ -1,0 +1,65 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenedor {
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15rem;
+
+}
+
+.dos-columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columnaimg {
+    width: 150rem;
+}
+
+.texto {
+    margin: 4rem;
+}
+
+/* Cambia elementos a las secciones (foto y texto) */
+@media (max-width:780px) {
+    .dos-columnas {
+        display: block;
+    }
+
+    .columnaimg {
+        width: auto;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .contenedor {
+        /* max-width: 780px; */
+        margin-top: 10rem;
+    }
+
+    .texto p {
+        text-align: justify;
+    }
+}
